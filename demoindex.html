@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@10.0.4/swiper-bundle.min.css" />
+  <style>
+
+    body {
+      background-image: url("background.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      background-color: #CCCCCC;
+    }
+
+    #logo {
+      width: 50px;
+      height: 50px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin-right: 10px;
+    }
+
+    .slider-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* scroll bar*/
+    }
+
+    .swiper-wrapper {
+      display: flex;
+      width: max-content; 
+    }
+
+    .swiper-slide {
+      flex-shrink: 0;
+      width: 100vw; 
+      height: 100vh; 
+    }
+
+    .swiper-slide img {
+      width: 100%; 
+      height: 100%;
+      object-fit: cover; 
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #ffffff;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .swiper-button-next {
+      right: 10px;
+    }
+
+    .swiper-button-prev {
+      left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <span id="logo">logo</span>
+    </div>
+    <nav style="margin-left: auto;">
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="signup-login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="slider-container">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="image1.jpg" alt="Image 1">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://www.bing.com/images/search?view=detailV2&ccid=w4SQ0P5k&id=BDB726E2A718085955C1A9F8B4623D5F94070C77&thid=OIP.w4SQ0P5kMRSRSDxR-2YP4gHaEt&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.c38490d0fe64311491483c51fb660fe2%3frik%3ddwwHlF89YrT4qQ%26riu%3dhttp%253a%252f%252fhdqwalls.com%252fwallpapers%252fshooting-stars-in-purple-sky-k8.jpg%26ehk%3dZ9Rm9PkX14Zhy1IXoWXIyqRe1L13YoqHlqZvgibpdpo%253d%26risl%3d%26pid%3dImgRaw%26r%3d0&exph=1634&expw=2569&q=Purple+Sky+with+Stars&simid=608045865007536298&FORM=IRPRST&ck=ED670F62DCA4DF406AEA8DD4E05233B0&selectedIndex=2" alt="Image 2">
+        </div>
+        <div class="swiper-slide">
+          <img src="image3.jpg" alt="Image 3">
+        </div>
+        <!-- Add more slides as needed -->
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/swiper@10.0.4/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>
